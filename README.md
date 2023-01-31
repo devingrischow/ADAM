@@ -1,2 +1,4 @@
 # ADAM
-A program to organize tons of helpfull coding links, solutions, and present demos of classes and other structures to the user for memory refreshment. also features connected database to store all these pieces of data in a nice orderly fashion. Features a gui for advanced uses. Program is meant to increase user efficiency in coding in the long term
+ A program to organize tons of helpfull coding links, solutions, and present demos of clasases and other structures to the user for memory refreshment. also features connected database to store all these pieces of data in a nice orderly fashion. Also will feature a gui for advanced uses (ex in app google searching and displaying results and ability to quickly add to DB). Program is meant to increase user efficiency in coding in the long term, the more links you gather and organize the larger database of helpful links you gather. Sort of like an advanced coding notes app, with much more organization. 
+
+--no pyqt5

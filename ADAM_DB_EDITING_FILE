@@ -1,0 +1,47 @@
+--THIS TEXT FILE WILL CONTAIN THE INNER WORKINS OF ADAMS DATABASE, WHERE ALL OR MOST CHANGES WILL OCCUR
+CREATE TABLE Python(
+id INTEGER PRIMARY KEY, 
+Language TEXT DEFAULT 'PYTHON',
+HelpName TEXT NOT NULL,
+ShortDescription TEXT NOT NULL,
+Solution TEXT NOT NULL,
+ExtendedDescription TEXT NOT NULL,
+ExtraNotes TEXT DEFAULT 'None',
+Rating INTEGER NOT NULL,
+LinkToHelp TEXT NOT NULL,
+DateTimeEntry TEXT);
+
+SELECT HelpName, ShortDescription, Rating, DateTimeEntry FROM Python_TKINTER WHERE HelpName LIKE '%H%';
+
+CREATE TRIGGER makeDatePython AFTER INSERT ON Python
+BEGIN
+    UPDATE Python SET DateTimeEntry = DATE('now') WHERE Python.id = NEW.id;
+END
+;
+DROP TRIGGER makeDatePython;
+
+SELECT * FROM PYTHON_TKINTER;
+
+INSERT INTO Python (HelpName, ShortDescription, Solution, ExtendedDescription, ExtraNotes, Rating, LinkToHelp, DateTimeEntry) VALUES ('DEMO HELP WITH SPACES', 'This is a short description of a helpful note', 
+'OH MAN THIS DESCRIPTiON IS AWESOME
+CODE CODE CODE
+I CODE              
+WITH SPACES', 'What you wittnessed was python over heaven, its very rare people get to lay their eyes on it, feel honored before you die.', 'idk demo', 99,'youtube.com' ,'12/12/12');
+
+INSERT INTO Python (HelpName, ShortDescription, Solution, ExtendedDescription, ExtraNotes, Rating, LinkToHelp, DateTimeEntry) VALUES ('DEMO HELP WITH SPACES22', 'This is a short descripti22on of a h434elpful note', 
+'OH MAN THIS D2323ESCRIPTiON IS AWESOME
+CODE CODE CODE2323
+I CODE   2323           
+WITH SPA32322CES', 'What you wittnessed was pyth3232on over heaven, its very rare people get to lay their eyes on it, feel honored before you die.', 'i2dk demo', 99,'yo22tube.com' ,'12/12/12');
+
+SELECT * FROM PYTHON;
+
+DROP TABLE Python;
+DROP TABLE CSS;
+DROP TABLE HTML;
+DROP TABLE Php;
+DROP TABLE SQL;
+DROP TABLE Sqlite;
+DROP TABLE Swift;
+SELECT * FROM Python;
+SELECT Solution, ExtendedDescription, ExtraNotes, LinkToHelp FROM Python WHERE HelpName = 'HELPING';
